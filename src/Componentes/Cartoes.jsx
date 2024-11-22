@@ -19,7 +19,7 @@ export default function Cartoes({ pergunta, id,resposta }) {
 
     return (
         <Cartao>
-            <CartaoIdentificador alterarCor={alterarCor} contador={id + 1} setIniciar={setIniciar} iniciar={iniciar} setMostrarCartao={setMostrarCartao }></CartaoIdentificador>
+            <CartaoIdentificador alterarCor={alterarCor}  contador={id + 1} setIniciar={setIniciar} iniciar={iniciar} setMostrarCartao={setMostrarCartao }></CartaoIdentificador>
             <CartaoPrincipal setAlterarCor={setAlterarCor} setIniciar={setIniciar} setMostrarCartao={setMostrarCartao } pergunta={pergunta} iniciar={iniciar} resposta={resposta} mostrarCartao={mostrarCartao}></CartaoPrincipal>
         </Cartao>
 
