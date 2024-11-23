@@ -2,7 +2,7 @@ import styled from "styled-components"
 import virarCartao from "../assets/seta_virar.png"
 import { useState } from "react"
 
-export default function CartaoPrincipal({ pergunta, resposta, mostrarCartao,setIniciar,setMostrarCartao,setAlterarCor }) {
+export default function CartaoPrincipal({ pergunta,contadorFinal,setContadorFinal, resposta, mostrarCartao,setIniciar,setMostrarCartao,setAlterarCor }) {
 
     const botoes = [{ nome: "Não lembrei", cor: "#FF3030" }, 
         { nome: "Quase não lembrei", cor: "#FF922E" }, 
@@ -23,6 +23,7 @@ export default function CartaoPrincipal({ pergunta, resposta, mostrarCartao,setI
         setIniciar('flex')
         setMostrarCartao('none')
         setAlterarCor(cor)
+        setContadorFinal((prev) => prev + 1);
 
 
 

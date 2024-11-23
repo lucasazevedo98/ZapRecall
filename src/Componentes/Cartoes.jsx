@@ -7,7 +7,7 @@ import styled from "styled-components"
 
 
 
-export default function Cartoes({ pergunta, id,resposta }) {
+export default function Cartoes({ pergunta, id,resposta,contadorFinal,setContadorFinal }) {
 
 
     const [iniciar, setIniciar] = useState('flex')
@@ -20,7 +20,7 @@ export default function Cartoes({ pergunta, id,resposta }) {
     return (
         <Cartao>
             <CartaoIdentificador alterarCor={alterarCor}  contador={id + 1} setIniciar={setIniciar} iniciar={iniciar} setMostrarCartao={setMostrarCartao }></CartaoIdentificador>
-            <CartaoPrincipal setAlterarCor={setAlterarCor} setIniciar={setIniciar} setMostrarCartao={setMostrarCartao } pergunta={pergunta} iniciar={iniciar} resposta={resposta} mostrarCartao={mostrarCartao}></CartaoPrincipal>
+            <CartaoPrincipal  contadorFinal={contadorFinal} setContadorFinal={setContadorFinal} setAlterarCor={setAlterarCor} setIniciar={setIniciar} setMostrarCartao={setMostrarCartao } pergunta={pergunta} iniciar={iniciar} resposta={resposta} mostrarCartao={mostrarCartao}></CartaoPrincipal>
         </Cartao>
 
     )

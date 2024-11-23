@@ -2,20 +2,31 @@ import styled from "styled-components"
 import Header from "./Componentes/Header"
 import Cartoes from "./Componentes/Cartoes";
 import perguntas from "./Componentes/Data";
+import Footer from "./Componentes/Footer";
+import { useState } from "react";
 
 
 
 
 function App() {
 
+  const [contadorFinal,setContadorFinal] = useState(0)
+
   return (
     <AppContainer>
       <Header />
       <CartoesContainer>
         {perguntas.map((perguntas,i) => (
-          <Cartoes key={i} pergunta={perguntas.pergunta} resposta={perguntas.resposta} id={i} />
+          <Cartoes 
+          contadorFinal={contadorFinal}
+          setContadorFinal={setContadorFinal} 
+          key={i} 
+          pergunta={perguntas.pergunta} 
+          resposta={perguntas.resposta} 
+          id={i} />
         ))}
       </CartoesContainer>
+      <Footer contadorFinal={contadorFinal}/>
     </AppContainer>
 
   )
@@ -32,6 +43,7 @@ const AppContainer = styled.div`
   flex-direction:column;
   align-items:center;
   justify-content:center;
+  margin-bottom:50px;
 `;
 
 const CartoesContainer = styled.div`
