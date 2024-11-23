@@ -42,12 +42,12 @@ const AppContainer = styled.div`
   display:flex;
   flex-direction:column;
   align-items:center;
-  justify-content:center;
-  margin-bottom:50px;
+  justify-content:center; 
 `;
 
 const CartoesContainer = styled.div`
   width:300px;
   margin-top:100px;
   height:100%;
+  margin-bottom:80px;
 `
